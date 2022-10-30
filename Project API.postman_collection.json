@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "f55f4efe-9525-401b-ab7e-302252c01190",
+		"name": "Project API",
+		"description": "##### Dokumentasi API Collection\n\nThis collection contains sample requests from this \\[**API**\\](http://localhost/arkatama/project_api/)\n\nIt contains following request\n\n1. task_categories\n    1. Insert\n    2. Update\n    3. list\n    4. select\n    5. delete\n2. tasks\n    1. Insert\n    2. Update\n    3. list\n    4. select\n    5. delete\n\nEndFragmen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24141979"
+	},
+	"item": [
+		{
+			"name": "task_categories",
+			"item": [
+				{
+					"name": "insert-task_categories",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\": \"Annualy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/arkatama/project_api/task_categories/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"arkatama",
+								"project_api",
+								"task_categories",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Sangat Mudah",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-task_categories",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\": \"Sulit\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/arkatama/project_api/task_categories/update/id_categories/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"arkatama",
+								"project_api",
+								"task_categories",
+								"update",
+								"id_categories",
+								""
+							],
+							"query": [
+								{
+									"key": null,
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-task_categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/arkatama/project_api/task_categories/list?page=1&per-page=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"arkatama",
+								"project_api",
+								"task_categories",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per-page",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "select-task_categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/arkatama/project_api/task_categories/index?id_categories=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"arkatama",
+								"project_api",
+								"task_categories",
+								"index"
+							],
+							"query": [
+								{
+									"key": "id_categories",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-task_categories",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/arkatama/project_api/task_categories/index/id_categories/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"arkatama",
+								"project_api",
+								"task_categories",
+								"index",
+								"id_categories",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "insert-tasks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n\t\"category_id\" : \"2\",\r\n\t\"tittle\" : \"Tugas Kecil\",\r\n\t\"description\" : \"Tugas ini membuat sebuah dokumen\",\r\n\t\"start_date\" : \"2022-10-29\",\r\n\t\"finish_date\" : \"2022-11-09\",\r\n\t\"status\" : \"New\",\r\n\t\"doc_url\" : \"Kirim jawaban disini\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/arkatama/project_api/tasks/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"arkatama",
+								"project_api",
+								"tasks",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-tasks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"category_id\" : \"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/arkatama/project_api/tasks/update/id_tasks/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"arkatama",
+								"project_api",
+								"tasks",
+								"update",
+								"id_tasks",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "select-tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/arkatama/project_api/tasks/index/id_tasks/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"arkatama",
+								"project_api",
+								"tasks",
+								"index",
+								"id_tasks",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/arkatama/project_api/tasks/list?page=0&per-page=50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"arkatama",
+								"project_api",
+								"tasks",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "per-page",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-tasks",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/arkatama/project_api/tasks/index/id_tasks/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"arkatama",
+								"project_api",
+								"tasks",
+								"index",
+								"id_tasks",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
